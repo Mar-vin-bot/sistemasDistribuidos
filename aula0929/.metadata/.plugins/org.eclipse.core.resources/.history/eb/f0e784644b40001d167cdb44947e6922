@@ -1,0 +1,28 @@
+package exercicioSala;
+
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+
+public class Client {
+
+	public static void main(String args[]) {
+		Calc calculator;
+		try {
+			calculator = (Calc) Naming.lookup("rmi://localhost:2335/calc");
+			int a = 3; // n da serie
+			int b = 4;
+			int f = calculator.getSoma(a,b);
+			System.out.println(" A soma eh: " + f);
+
+		}
+		catch(MalformedURLException e) {
+			System.out.println( );
+		}
+		catch(RemoteException re) {
+			System.err.println();
+		}
+		catch(NotBoundException e) {
+			System.out.println( );
+		}
+	}

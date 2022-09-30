@@ -1,0 +1,16 @@
+package exercicioSala;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface Calc extends Remote {
+
+	public int areaQuadrado (int a, int b) throws RemoteExeption;
+	public int areaRetangulo (int a, int b) throws RemoteExeption;
+	public int areaTriangulo (int altura, int base) throws RemoteException;
+	public int areaCirculo (int raio) throws RemoteException;
+	
+	
+}
+
+

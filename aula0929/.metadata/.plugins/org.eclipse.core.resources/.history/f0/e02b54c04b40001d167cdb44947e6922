@@ -1,0 +1,28 @@
+package exercicioSala;
+
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+
+public class Client {
+
+	public static void main(String args[]) {
+		Calc calculator;
+		try {
+			calculator = (Calc) Naming.lookup("rmi://localhost:2335/calc");
+            String parametro = "0";
+            double area = 0.0;
+            int num1, num2, num3;
+			System.out.println();
+
+		}
+		catch(MalformedURLException e) {
+			System.out.println( );
+		}
+		catch(RemoteException re) {
+			System.err.println();
+		}
+		catch(NotBoundException e) {
+			System.out.println( );
+		}
+	}
