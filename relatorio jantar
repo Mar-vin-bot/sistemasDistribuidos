@@ -1,0 +1,63 @@
+class Filosofos
+
+thered garfo, dir e esqu
+metodo run sempre true sorteio garfo direita e sorteio garfo esquerda
+sorteioDir: randon 1-5		sorteioEsq: randon 1-5
+
+
+
+
+
+class filosofo
+metodoPensar
+Imprime o filosofo esta pensando e dá 1000ms para novosorteio
+
+metodoRun
+	while true
+se for sorteado na direita gasrfo 5
+Se o garfoesquerda == 1
+	o filosofo xxx ira comer
+	o filosofo xxx solta garfo esquerda
+	o filosofo xxx solta garfo direita
+else "filo xxx solta o garfo"
+else try pensar(1000);
+	(repete com todos os garfos) **os garfos tem os pares exatos sempre olhando pela direita
+	
+	
+Na classe teste
+	garfos recebem seus pares 1,5 - 2,1 - 3,2 - 4,3 - 5,4 (dir/esq)
+	os filosofos recebem nome e garfo(combinacao)
+	
+	new Thread(Filosofo).start
+	
+class principal
+	main
+	Filosofos f = new Filosofos();
+	f.test()		
+	
+https://www.youtube.com/watch?v=IiRsHz-aCmI
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	

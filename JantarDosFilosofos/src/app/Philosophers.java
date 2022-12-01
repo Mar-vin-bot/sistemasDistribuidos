@@ -28,8 +28,28 @@ public class Philosophers extends Thread {
 
 		while (true) {
 
-			if (Fork.sorteioRightFork() == 5) {
+			if (Fork.sorteioRightFork() == 4) {
 				System.out.println("O filosofo " + name + " pegou o garfo " + Fork.sorteioRightFork());
+
+				if (Fork.sorteioLeftFork() == 0) {
+					System.out.println("O filosofo " + name + " pegou o garfo da esquerda " + Fork.sorteioLeftFork());
+					System.out.println("O filosofo " + name + " esta comendo");
+					System.out.println("O filosofo " + name + " largou o garfo da direita");
+					System.out.println("O filosofo " + name + " largou o garfo da esquerda");
+				} else {
+					System.out.println("O filosofo " + name + " largou o garfo da direita " + Fork.sorteioRightFork());
+				}
+
+			} else {
+				try {
+					toThink();
+				} catch (InterruptedException e) {
+					System.out.println(e);
+				}
+			}
+
+			if (Fork.sorteioRightFork() == 0) {
+				System.out.println("O filosofo " + name + " pegou o garfo  da direita" + Fork.sorteioRightFork());
 
 				if (Fork.sorteioLeftFork() == 1) {
 					System.out.println("O filosofo " + name + " pegou o garfo da esquerda " + Fork.sorteioLeftFork());
@@ -92,26 +112,6 @@ public class Philosophers extends Thread {
 				System.out.println("O filosofo " + name + " pegou o garfo " + Fork.sorteioRightFork());
 
 				if (Fork.sorteioLeftFork() == 4) {
-					System.out.println("O filosofo " + name + " pegou o garfo da esquerda " + Fork.sorteioLeftFork());
-					System.out.println("O filosofo " + name + " esta comendo");
-					System.out.println("O filosofo " + name + " largou o garfo da direita");
-					System.out.println("O filosofo " + name + " largou o garfo da esquerda");
-				} else {
-					System.out.println("O filosofo " + name + " largou o garfo da direita " + Fork.sorteioRightFork());
-				}
-
-			} else {
-				try {
-					toThink();
-				} catch (InterruptedException e) {
-					System.out.println(e);
-				}
-			}
-
-			if (Fork.sorteioRightFork() == 4) {
-				System.out.println("O filosofo " + name + " pegou o garfo " + Fork.sorteioRightFork());
-
-				if (Fork.sorteioLeftFork() == 5) {
 					System.out.println("O filosofo " + name + " pegou o garfo da esquerda " + Fork.sorteioLeftFork());
 					System.out.println("O filosofo " + name + " esta comendo");
 					System.out.println("O filosofo " + name + " largou o garfo da direita");
